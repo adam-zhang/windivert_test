@@ -1,0 +1,20 @@
+﻿Build started 10/10/2017 9:21:26 AM.
+     1>Project "C:\Users\zmp\documents\visual studio 2012\Projects\WinDivert\test003\test003.vcxproj" on node 4 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Helper.cpp IPHeader.cpp error.cpp main.cpp
+         Skipping... (no relevant changes detected)
+         main.cpp
+         error.cpp
+         IPHeader.cpp
+         Helper.cpp
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\zmp\documents\visual studio 2012\Projects\WinDivert\Debug\test003.exe" /INCREMENTAL /NOLOGO ws2_32.lib windivert.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\zmp\documents\visual studio 2012\Projects\WinDivert\Debug\test003.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\zmp\documents\visual studio 2012\Projects\WinDivert\Debug\test003.lib" /MACHINE:X86 Debug\error.obj
+         Debug\Helper.obj
+         Debug\IPHeader.obj
+         Debug\main.obj
+         test003.vcxproj -> C:\Users\zmp\documents\visual studio 2012\Projects\WinDivert\Debug\test003.exe
+     1>Done Building Project "C:\Users\zmp\documents\visual studio 2012\Projects\WinDivert\test003\test003.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.40
