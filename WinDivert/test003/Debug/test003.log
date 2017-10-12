@@ -1,20 +1,33 @@
-﻿Build started 10/10/2017 9:21:26 AM.
-     1>Project "C:\Users\zmp\documents\visual studio 2012\Projects\WinDivert\test003\test003.vcxproj" on node 4 (Build target(s)).
-     1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Helper.cpp IPHeader.cpp error.cpp main.cpp
-         Skipping... (no relevant changes detected)
-         main.cpp
-         error.cpp
-         IPHeader.cpp
-         Helper.cpp
-       Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\zmp\documents\visual studio 2012\Projects\WinDivert\Debug\test003.exe" /INCREMENTAL /NOLOGO ws2_32.lib windivert.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\zmp\documents\visual studio 2012\Projects\WinDivert\Debug\test003.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\zmp\documents\visual studio 2012\Projects\WinDivert\Debug\test003.lib" /MACHINE:X86 Debug\error.obj
-         Debug\Helper.obj
-         Debug\IPHeader.obj
-         Debug\main.obj
-         test003.vcxproj -> C:\Users\zmp\documents\visual studio 2012\Projects\WinDivert\Debug\test003.exe
-     1>Done Building Project "C:\Users\zmp\documents\visual studio 2012\Projects\WinDivert\test003\test003.vcxproj" (Build target(s)).
+﻿Build started 2017/10/12 16:59:12.
+Project "C:\Users\zmp\Projects\windivert_test\WinDivert\test003\test003.vcxproj" on node 2 (Build target(s)).
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt error.cpp Helper.cpp IPHeader.cpp main.cpp
+  main.cpp
+c:\users\zmp\projects\windivert_test\windivert\test003\main.cpp(24): warning C4200: nonstandard extension used : zero-sized array in struct/union
+          Cannot generate copy-ctor or copy-assignment operator when UDT contains a zero-sized array
+c:\users\zmp\projects\windivert_test\windivert\test003\main.cpp(91): warning C4244: 'argument' : conversion from 'unsigned long' to 'u_short', possible loss of data
+c:\users\zmp\projects\windivert_test\windivert\test003\main.cpp(97): warning C4100: 'dataLength' : unreferenced formal parameter
+c:\program files (x86)\microsoft visual studio 11.0\vc\include\xutility(2176): warning C4996: 'std::_Copy_impl': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\xutility(2157) : see declaration of 'std::_Copy_impl'
+          c:\users\zmp\projects\windivert_test\windivert\test003\main.cpp(88) : see reference to function template instantiation '_OutIt std::copy<unsigned char*,UINT8*>(_InIt,_InIt,_OutIt)' being compiled
+          with
+          [
+              _OutIt=UINT8 *,
+              _InIt=unsigned char *
+          ]
+  IPHeader.cpp
+  Helper.cpp
+c:\users\zmp\projects\windivert_test\windivert\test003\helper.cpp(9): warning C4127: conditional expression is constant
+  error.cpp
+  Generating Code...
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\zmp\Projects\windivert_test\WinDivert\Debug\test003.exe" /INCREMENTAL /NOLOGO ws2_32.lib windivert.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\zmp\Projects\windivert_test\WinDivert\Debug\test003.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\zmp\Projects\windivert_test\WinDivert\Debug\test003.lib" /MACHINE:X86 Debug\error.obj
+  Debug\Helper.obj
+  Debug\IPHeader.obj
+  Debug\main.obj
+  test003.vcxproj -> C:\Users\zmp\Projects\windivert_test\WinDivert\Debug\test003.exe
+Done Building Project "C:\Users\zmp\Projects\windivert_test\WinDivert\test003\test003.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.40
+Time Elapsed 00:00:04.81
