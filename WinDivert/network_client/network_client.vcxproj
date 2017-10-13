@@ -69,7 +69,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>%WINDIVERT%\include;$(IncludePath)</IncludePath>
-    <LibraryPath>%WINDIVERT%\x86;$(LibraryPath)</LibraryPath>
+    <LibraryPath>%WINDIVERT%\amd64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>

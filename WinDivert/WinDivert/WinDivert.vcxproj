@@ -71,7 +71,7 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>%WINDIVERT%\include;$(IncludePath)</IncludePath>
     <LibraryPath>%WINDIVERT%\x86;$(LibraryPath)</LibraryPath>
-    <ExecutablePath>%WINDIVERT%\MSVC;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
