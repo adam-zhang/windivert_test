@@ -14,8 +14,6 @@
 #include <memory>
 #include "Interceptor.h"
 
-// Link with ws2_32.lib
-//#pragma comment(lib, "Ws2_32.lib")
 
 using namespace std;
 

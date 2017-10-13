@@ -6,4 +6,10 @@
     <LocalDebuggerEnvironment>path=%WINDIVERT%\x86
 $(LocalDebuggerEnvironment)</LocalDebuggerEnvironment>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerCommandArguments>bl.txt</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerEnvironment>path=%WINDIVERT%\amd64
+$(LocalDebuggerEnvironment)</LocalDebuggerEnvironment>
+  </PropertyGroup>
 </Project>

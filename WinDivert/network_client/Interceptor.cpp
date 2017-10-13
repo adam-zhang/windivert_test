@@ -105,18 +105,14 @@ static string buildFilter(Interceptor& interceptor)
 	return ss.str();
 }
 
-static shared_ptr<Packet> getData(const unsigned char* dataPacket, size_t length)
+static shared_ptr<Packet> getData(const unsigned char* dataPacket, UINT length)
 {
 	shared_ptr<Packet> packet = make_shared<Packet>();
 	WINDIVERT_IPHDR* ipHeader = 0;
 	WINDIVERT_TCPHDR* tcpHeader = 0;
-	size_t dataLength = 0;
+	UINT dataLength = 0;
 	unsigned char* data = 0;
-	if (!WinDivertHelperParsePacket(data, length, &ipHeader, NULL, NULL, NULL, &tcpHeader, NULL, (PVOID*)&data, &dataLength))
-	{
-		outputDebugString(TEXT("Parse packet failed."), 0);
-		return packet;
-	}
+	WinDivertHelperParsePacket((PVOID)dataPacket, length, &ipHeader, NULL, NULL, NULL, &tcpHeader, NULL, (PVOID*)&data, &dataLength);
 	packet->setIpHeader(*ipHeader);
 	packet->setTcpHeader(*tcpHeader);
 	packet->setData(data, dataLength);
@@ -245,7 +241,7 @@ void catchData(HANDLE handle)
 {
 	vector<unsigned char> buffer(MAX_BUFFER);
 	WINDIVERT_ADDRESS address = {0};
-	size_t length = 0;
+	UINT length = 0;
 	if (!WinDivertRecv(handle, &buffer[0], MAX_BUFFER, &address, &length))
 	{
 		outputDebugString(TEXT("WinDivertRecv failed. "), length);
