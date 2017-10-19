@@ -1,5 +1,6 @@
 #include "Divertor.h"
 #include <iostream>
+#include "../WinDivert/windivert_device.h"
 #include "OldOne.h"
 using namespace std;
 
@@ -13,6 +14,7 @@ int newmain(int, char**)
 
 int main(int argc, char** argv)
 {
+	//OutputDebugString(WINDIVERT_DEVICE_NAME);
 	return newmain(argc, argv);
 	//return oldmain(argc, argv);
 }

@@ -31,7 +31,7 @@ const vector<unsigned char> Client::send(const vector<unsigned char>& data)
 	SOCKADDR_IN address = {0};
 	address.sin_addr.S_un.S_addr = Configuration::instance().ip();
 	address.sin_family = AF_INET;
-	address.sin_port = htons(23456);
+	address.sin_port = htons(Configuration::instance().port());
 	int result = connect(s, (SOCKADDR*)&address, sizeof(SOCKADDR_IN));
 	if (result == SOCKET_ERROR)
 	{

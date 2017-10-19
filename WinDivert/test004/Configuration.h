@@ -8,5 +8,6 @@ public:
 	~Configuration(void);
 public:
 	int ip();
+	short port();
 };
 
