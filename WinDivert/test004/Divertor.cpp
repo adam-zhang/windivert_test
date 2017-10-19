@@ -123,7 +123,7 @@ void sendDelegateData(HANDLE handle, WINDIVERT_ADDRESS& address, WINDIVERT_IPHDR
 	blockpage->header.tcp.Ack     = 1;
 	memcpy(blockpage->data, &receivedData[0], receivedData.size());
 
-	UINT32 destination = ip_header->DstAddr;
+	//UINT32 destination = ip_header->DstAddr;
 	blockpage->header.ip.SrcAddr       = ip_header->DstAddr;
 	blockpage->header.ip.DstAddr       = ip_header->SrcAddr;
 	blockpage->header.tcp.DstPort      = tcp_header->SrcPort;
@@ -200,7 +200,10 @@ DWORD WINAPI threadProc(LPVOID param)
 	Divertor* divertor = static_cast<Divertor*>(param);
 	HANDLE handle = WinDivertOpen(divertor->filter().c_str(), WINDIVERT_LAYER_NETWORK, 0, 0);
 	if (handle == INVALID_HANDLE_VALUE)
+	{
+		Debugger::instance().output(TEXT("Create Divert failed."), GetLastError());
 		return CREATE_WINDIVERT_FAILED;
+	}
 	divertor->setHandle(handle);
 	while(handle != INVALID_HANDLE_VALUE)
 	{
