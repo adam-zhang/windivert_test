@@ -176,6 +176,8 @@ void catchData(const HANDLE& handle)
 	WINDIVERT_ADDRESS address = {0};
 	if(!WinDivertRecv(handle, &buffer[0], buffer_size, &address, &payloadLength))
 		return;
+
+
 	WINDIVERT_IPHDR* ipHeader;
 	WINDIVERT_TCPHDR* tcpHeader;
 	unsigned char* data;
